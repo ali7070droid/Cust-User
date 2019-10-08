@@ -1,0 +1,10 @@
+
+
+<body>
+	{% if user.is_authenticated %}
+		<p> Name: {{user.username}} </p>
+	{% else %}
+		<p> You are not registered </p>
+		<a href="{% url 'register' %}"> Register </a>
+	{% endif %}
+</body>
